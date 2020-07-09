@@ -213,6 +213,7 @@ def linkSSL(connectiontype,nitroNSIP,authToken, nschainname, nspairname):
        "certkey": nspairname,
        "linkcertkeyname": nschainname,}
    }
+   print json_string
    payload = json.dumps(json_string)
    response = requests.post(url, data=payload, headers=headers, verify=False)
    print "Link Netscaler CERTS: %s" % response.reason
@@ -231,7 +232,9 @@ if whattodo == "save":
    if existcode == 200:
        print "Using existing cert"
        removeFile(connectiontype,nitroNSIP,authToken,nscert,nscertpath)
+       removeFile(connectiontype,nitroNSIP,authToken,nskey,nscertpath)
        sendFile(connectiontype,nitroNSIP,authToken,nscert,localcert,nscertpath)
+       sendFile(connectiontype,nitroNSIP,authToken,nskey,localkey,nscertpath)
        updateSSL(connectiontype,nitroNSIP,authToken, nscert, nspairname)
    else:
        print "Creating Netscaler Certificate"

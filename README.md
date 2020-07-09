@@ -1,3 +1,7 @@
-To be used with [Netscaler Certificate Automation](http://techdrabble.com/citrix/18-letsencrypt-san-certificate-with-citrix-netscaler-take-2) process.  Please checkout blog for how-to.
+# NS-Letsencrypt
 
-Uses [dehydrated](https://github.com/lukas2511/dehydrated) to create and renew certificates.  Then Python scripts utilizing REST API to update Netscaler.
+Tools for manage Letsencrypt Certificates on Citrix Netscaler.
+
+Based on original work of Ryan Butler (techdrabble.com), released under GPL 2.
+
+This is a modified version, without Dehydrated, to be used with certbot renewal hooks and a DNS-01 Challenge mechanism.  

@@ -1,4 +1,4 @@
-nitroNSIP = "192.168.2.54"
+nitroNSIP = "192.168.1.1"
 nitroUser = "nsroot"
 nitroPass = "nsroot"
 
@@ -7,22 +7,11 @@ connectiontype = "https"
 
 #Certificate and private key file names on Netscaler
 #Pair Name Prefix (le-certificate-mydomain)
-nspairname = "le-server"
-#File Name Prefix (le-cert-myhostname.domain.com.pem)
-nscert = "le"
-nskey = "le"
-#CA name and filename
+nspairname = "le-certificate"
 nschainname = "le-chain"
+#File Name Prefix (le-cert-myhostname.domain.com.pem)
+nscert = "le-cert"
+nskey = "le-privkey"
+#CA name and filename
 nschain = "le-chain.pem"
 nscertpath = "/nsconfig/ssl/"
-
-#Responder Policy prefix information for temporary policy (le-responder-act-mydomain.domain.com)
-nsrespact = "le-responder-act"
-nsresppol = "le-responder-pol"
-#Number to start creating policy priorities.  Each domain challenged will increase by one.
-polpristart = 10
-
-#HTTP Content switch or LB vserver name
-nsvip = "csw-http"
-#VIP type (csw or LB)
-viptype = "csw"

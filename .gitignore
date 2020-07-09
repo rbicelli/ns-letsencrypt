@@ -11,3 +11,4 @@ mynsconfig.py
 *.pyc
 chains/*
 .counter*
+tmp/*
