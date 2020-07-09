@@ -12,3 +12,4 @@ mynsconfig.py
 chains/*
 .counter*
 tmp/*
+.connect*
